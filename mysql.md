@@ -1,3 +1,8 @@
+- **数据库登录：**
+  ```
+   mysql -h域名 -P端口 -u用户名 -p 密码 数据库名 --default-character-set=utf8;
+  ```
+
 - **数据库备份：**
   ```
   mysql -h域名 -P端口 -u用户名 -p密码 数据库名 --default-character-set=utf8 -e "select id, create_time, update_time from table_test where id =1;" > /home/xxx/sql/xxx.csv
