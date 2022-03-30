@@ -1,3 +1,10 @@
+- **数据库备份：**
+  ```
+  mysql -h域名 -P端口 -u用户名 -p密码 数据库名 --default-character-set=utf8 -e "select id, create_time, update_time from table_test where id =1;" > /home/xxx/sql/xxx.csv
+  mysqldump -h域名 -P端口 -u用户名 -p密码 数据库名 > /home/xxx/sql/xxx.sql
+  mysqldump -h域名 -P端口 -u用户名 -p 密码 --databases 数据库名 --tables table1 table2  >xxx.sql
+  ```
+  
 - **查看表结构：**
   ```
    SELECT
