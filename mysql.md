@@ -10,6 +10,12 @@
   mysqldump -h域名 -P端口 -u用户名 -p 密码 --databases 数据库名 --tables table1 table2  >xxx.sql
   ```
   
+- **备份：**
+  -  INSERT INTO ... SELECT ... (table_name_new必须存在)
+  ```
+    INSERT INTO table_name_new ( c1, c2, c3 ) SELECT c1, c2, '固定值' FROM table_name_old WHERE 各种条件;
+    INSERT INTO table_name_new SELECT * FROM table_name_old WHERE 各种条件;
+  ```
 - **查看表结构：**
   ```
    SELECT
